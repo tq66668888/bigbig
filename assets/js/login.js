@@ -15,6 +15,7 @@ $(function() {
             $('.reg-box,.login-box').toggle()
         })
         // 自定义表单类型
+
     layui.form.verify({
         pwd: [
             /^[\S]{6,12}$/,
@@ -72,7 +73,7 @@ $(function() {
                 layui.layer.msg(res.message, { icon: 6 }, function() {
                     //把token保存到本地存储
                     localStorage.setItem('token', res.token)
-                    location.herf = 'index.html'
+                    location.href = '/index.html'
                 })
             }
         })
